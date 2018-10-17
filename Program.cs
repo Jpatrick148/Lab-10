@@ -24,7 +24,19 @@ namespace Lab_10
                     Console.WriteLine("Hello User! Please enter a Radius. ");
                     string input = Console.ReadLine();
                     check = double.TryParse(input, out userNum);
+                    if (userNum < 0)
+                    {
+                        Console.WriteLine("please enter a positive int.");
+                        check = false;
+                    }
+                    else if (!check)
+                    {
+                        Console.WriteLine("Please enter an Int.");
+                    }
                 } while (!check);
+                
+                    
+                
 
                 Circle c1 = new Circle(userNum);
                 circles.Add(c1);
