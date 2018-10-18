@@ -8,9 +8,8 @@ namespace Lab_10
 {
     class Circle
     {
-        private double radius, c, area, a;
-        private string formatC;
-        private string formatA, formatN;
+        private double radius;
+       
 
 
         public Circle(double radius)
@@ -27,27 +26,27 @@ namespace Lab_10
 
         public double CalculateCircumference()
         {
-            c = radius * 2 * Math.PI;
+            double c = radius * 2 * Math.PI;
             return c;
         }
 
         public string CalculateFormattedCircumference()
         {
-            c = CalculateCircumference();
-            formatC = string.Format("The Circumference of your circle is  {0:0.00}", c);
+            double c = CalculateCircumference();
+            string formatC = string.Format("The Circumference of your circle is  {0:0.00}", c);
             return formatC;
         }
 
         public double CalculateArea()
         {
-            a = (Math.PI * radius * radius);
+            double a = (Math.PI * radius * radius);
             return a;
         }
 
         public string CalculateFormattedArea()
         {
-            a = CalculateArea();
-            formatA = string.Format("The Area of your circle is {0:0.00}", a);
+            double a = CalculateArea();
+            string formatA = string.Format("The Area of your circle is {0:0.00}", a);
             return formatA;
         }
 
